@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MVCView">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0a080094" height="407.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <ImageView fx:id="imageView" fitHeight="321.0" fitWidth="414.0" layoutX="-10.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="-2.0">
+         <viewport>
+            <Rectangle2D />
+         </viewport></ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eceff2" height="298.0" layoutX="385.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="218.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edeff0" height="119.0" layoutX="434.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" width="133.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#010911" height="107.0" layoutY="292.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Button layoutX="229.0" layoutY="348.0" mnemonicParsing="false" onAction="#turnRight" text="Turn right" textFill="#030303">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Button>
+      <Button fx:id="forwardButton" layoutX="120.0" layoutY="309.0" mnemonicParsing="false" onAction="#forward" text="Go forward" />
+      <Button layoutX="30.0" layoutY="348.0" mnemonicParsing="false" onAction="#turnLeft" text="Turn left" />
+      <ImageView fx:id="itemImageView" fitHeight="133.0" fitWidth="115.0" layoutX="443.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="443.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="134.0" />
+      <Label layoutX="453.0" layoutY="104.0" text="room hanging:" textFill="#141313" />
+      <Button fx:id="putDown" layoutX="412.0" layoutY="348.0" mnemonicParsing="false" onAction="#putDownObject" text="Place hanging in room" />
+      <Button layoutX="414.0" layoutY="71.0" mnemonicParsing="false" onAction="#pickObjectUp" text="Pick current hanging up" />
+      <ComboBox fx:id="comboBox" layoutX="401.0" layoutY="309.0" prefHeight="26.0" prefWidth="185.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fafbfc" height="400.0" layoutX="381.0" layoutY="-9.0" stroke="BLACK" strokeType="INSIDE" width="8.0" />
+      <TextArea fx:id="instructionText" layoutX="-3.0" layoutY="-3.0" prefHeight="298.0" prefWidth="388.0" text="                             &#10;                                 Instructions:&#10;&#10;&#10;This application lets you turn left and right in rooms, &#10;and move between rooms using the buttons below. &#10;&#10;&#10;Your mission, should you choose to accept it, is to &#10;find your way from the wall with the word 'Start' on &#10;it to the wall with the word 'Finish' on it. &#10;&#10;&#10;Each room has a different wall background. &#10;In each room, you can place a wall hanging with &#10;the corresponding background. You can this to &#10;keep track of which rooms you have been it as &#10;when you set a wall hanging in a room, it will stay &#10;there so you will  know you've been there if you &#10;enter again.&#10;&#10;&#10;Have fun and good luck!&#10;&#10;&#10;To exit this instructions screen, click the instructions &#10;button again. You can come back to this screen &#10;any time.&#10;" />
+      <Button layoutX="445.0" layoutY="14.0" mnemonicParsing="false" onAction="#showInstructions" prefHeight="43.0" prefWidth="115.0" text="Instructions" textFill="#fc03b9" underline="true" />
+   </children>
+</AnchorPane>
